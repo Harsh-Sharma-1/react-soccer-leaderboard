@@ -1,0 +1,43 @@
+.leaderboard {
+    table {
+        thead {
+            th.homeTeamHeader {
+                text-align: right;
+            }
+        }
+
+        tbody {
+            td {
+                .teamName {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: start;
+
+                    p {
+                        text-align: right;
+                    }
+
+                    img {
+                        width: 53px;
+                        height: 37px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tableGD {
+        display: none;
+    }
+
+    @media (max-width: 500px) {
+        .tableGF,
+        .tableGA {
+            display: none;
+        }
+        .tableGD {
+            display: table-cell;
+        }
+    }
+}

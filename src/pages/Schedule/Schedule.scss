@@ -1,0 +1,72 @@
+.schedule {
+    table {
+        thead {
+            th.homeTeamHeader {
+                text-align: right;
+            }
+        }
+
+        tbody {
+            tr:nth-child(even) {
+                background: #f6f7f7;
+            }
+            td {
+                .homeTeam,
+                .awayTeam {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    p {
+                        text-align: right;
+                    }
+
+                    img {
+                        width: 53px;
+                        height: 37px;
+                    }
+                }
+
+                .homeTeam {
+                    justify-content: end;
+                }
+
+                .awayTeam {
+                    justify-content: start;
+                }
+            }
+
+            td.score {
+                text-align: center;
+            }
+
+            tr:nth-child(even) {
+                background: #f6f7f7;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        .tableStadium {
+            display: none;
+        }
+
+        table {
+            td:nth-of-type(2) {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .tableDateTime {
+            display: none;
+        }
+
+        table {
+            td:nth-of-type(1) {
+                display: none;
+            }
+        }
+    }
+}
